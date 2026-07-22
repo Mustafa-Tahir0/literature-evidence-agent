@@ -1,0 +1,38 @@
+{
+  "name": "Literature Evidence Assistant",
+  "description": "Given a research question or claim, searches PubMed, Semantic Scholar, and arXiv, then synthesizes an evidence summary grounded in real, cited papers -- flagging contradictions and explicitly saying when evidence is thin or absent rather than guessing.",
+  "url": "http://127.0.0.1:9110/",
+  "version": "0.1.0",
+  "protocolVersion": "0.3.0",
+  "preferredTransport": "JSONRPC",
+  "provider": {
+    "organization": "WashU Digital Transformation Research Corps",
+    "url": "https://github.com/washu-dev/agent-skeleton"
+  },
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/plain", "application/json"],
+  "securitySchemes": {},
+  "security": [],
+  "skills": [
+    {
+      "id": "literature/evidence_summary",
+      "name": "Summarize evidence for a research question or claim",
+      "description": "Searches PubMed, Semantic Scholar, and arXiv for papers relevant to a research question or claim, then returns a citation-grounded evidence summary: what the literature says, where it disagrees, and how confident the answer is. Never fabricates a citation; states plainly when evidence is sparse, absent, or a search failed.",
+      "tags": ["literature-review", "evidence-synthesis", "citation-search", "research", "read"],
+      "examples": [
+        "What does the evidence say about metformin and cancer risk?",
+        "Is there research support for spaced repetition improving long-term retention?",
+        "Find recent papers on retrieval-augmented generation for scientific QA.",
+        "Do studies on intermittent fasting and cardiovascular risk agree with each other?"
+      ],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["text/plain", "application/json"],
+      "security": []
+    }
+  ]
+}

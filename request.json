@@ -1,0 +1,15 @@
+{
+  "jsonrpc": "2.0",
+  "id": "1",
+  "method": "message/send",
+  "params": {
+    "message": {
+      "kind": "message",
+      "messageId": "test-msg-1",
+      "role": "user",
+      "parts": [
+        {"kind": "text", "text": "What does the evidence say about metformin and cancer risk?"}
+      ]
+    }
+  }
+}
